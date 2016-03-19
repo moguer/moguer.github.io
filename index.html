@@ -1,9 +1,13 @@
+---
+layout: default
+title: Moguer
+---
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Moguer.GitHub.io by moguer</title>
+    <title>Moguer</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
@@ -15,12 +19,14 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Moguer.GitHub.io</h1>
-        <p>Hello Moguer</p>
-
-
+        <h1>Moguer@GitHub</h1>
         <p class="view"><a href="https://github.com/moguer">View My GitHub Profile</a></p>
-
+        <p>最新文章</p>
+        <!--<ul> -->
+        　　{% for post in site.posts %}
+        　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+        　　{% endfor %}
+        <!-- </ul> -->
       </header>
       <section>
         <h3>
